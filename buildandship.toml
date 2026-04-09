@@ -1,0 +1,22 @@
+# Build & Ship configuration for anthrogate
+# Detected: Static Site
+# Docs: https://buildandship.dev/docs/config
+
+[project]
+name = "anthrogate"
+framework = "static"
+
+[build]
+
+[deploy]
+port = 3000
+health_check = "/"
+zero_downtime = true
+min_healthy_seconds = 10
+
+# [domain]
+# custom = "myapp.com"  # Uncomment to use a custom domain
+
+# [resources]
+# memory = "512MB"
+# cpu = 1.0

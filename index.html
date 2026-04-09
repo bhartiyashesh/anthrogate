@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>AnthroGate</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app" class="phone-frame">
+
+    <!-- Screen 1: Home / Mini Apps -->
+    <div id="screen-home" class="screen active">
+      <header class="home-header">
+        <div class="header-left">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="7" height="7" rx="1.5" stroke="white" stroke-width="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5" stroke="white" stroke-width="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5" stroke="white" stroke-width="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5" stroke="white" stroke-width="1.5"/></svg>
+        </div>
+        <div class="header-title">
+          <div class="anthrogate-logo-small">
+            <svg width="22" height="22" viewBox="0 0 40 40"><circle cx="20" cy="20" r="18" fill="#6C5CE7" stroke="#A29BFE" stroke-width="2"/><path d="M14 26 L20 12 L26 26" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/><line x1="16" y1="22" x2="24" y2="22" stroke="white" stroke-width="2" stroke-linecap="round"/><circle cx="20" cy="10" r="2" fill="#A29BFE"/></svg>
+          </div>
+          <span>AnthroGate</span>
+        </div>
+        <div class="header-right">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M13.73 21a2 2 0 01-3.46 0" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+      </header>
+
+      <div class="home-stats">
+        <div class="stat-card">
+          <div class="stat-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M16 21v-2a4 4 0 00-4-4H6a4 4 0 00-4 4v2" stroke="#A29BFE" stroke-width="1.5"/><circle cx="9" cy="7" r="4" stroke="#A29BFE" stroke-width="1.5"/><path d="M22 21v-2a4 4 0 00-3-3.87" stroke="#A29BFE" stroke-width="1.5"/><path d="M16 3.13a4 4 0 010 7.75" stroke="#A29BFE" stroke-width="1.5"/></svg>
+          </div>
+          <div class="stat-number">2,847,391</div>
+          <div class="stat-label">Verified Humans</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon akma-icon">
+            <svg width="22" height="22" viewBox="0 0 40 40"><circle cx="20" cy="20" r="16" fill="none" stroke="#6C5CE7" stroke-width="2.5"/><path d="M14 26 L20 12 L26 26" stroke="#6C5CE7" stroke-width="2" stroke-linecap="round" fill="none"/><line x1="16" y1="22" x2="24" y2="22" stroke="#6C5CE7" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </div>
+          <div class="stat-badge">AKMA</div>
+          <div class="stat-label">Proof of Human</div>
+        </div>
+      </div>
+
+      <div class="section-header">
+        <h2>Verified Apps</h2>
+        <span class="see-more">Get more ></span>
+      </div>
+
+      <div class="mini-apps-grid">
+        <div class="mini-app" data-app="vaultify" onclick="openApp('vaultify')">
+          <div class="app-icon" style="background: linear-gradient(135deg, #0984e3, #74b9ff);">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><rect x="3" y="11" width="18" height="11" rx="2" stroke="white" stroke-width="1.5"/><path d="M7 11V7a5 5 0 0110 0v4" stroke="white" stroke-width="1.5" stroke-linecap="round"/><circle cx="12" cy="16" r="1.5" fill="white"/></svg>
+          </div>
+          <span>Vaultify</span>
+        </div>
+        <div class="mini-app" data-app="humanpay" onclick="openApp('humanpay')">
+          <div class="app-icon" style="background: linear-gradient(135deg, #00b894, #55efc4);">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <span>HumanPay</span>
+        </div>
+        <div class="mini-app" data-app="votetrue" onclick="openApp('votetrue')">
+          <div class="app-icon" style="background: linear-gradient(135deg, #e17055, #fab1a0);">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M9 11l3 3L22 4" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <span>VoteTrue</span>
+        </div>
+        <div class="mini-app" data-app="airdropx" onclick="openApp('airdropx')">
+          <div class="app-icon" style="background: linear-gradient(135deg, #6c5ce7, #a29bfe);">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M12 2L2 7l10 5 10-5-10-5z" stroke="white" stroke-width="1.5" stroke-linejoin="round"/><path d="M2 17l10 5 10-5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M2 12l10 5 10-5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <span>AirdropX</span>
+        </div>
+        <div class="mini-app" data-app="idguard" onclick="openApp('idguard')">
+          <div class="app-icon" style="background: linear-gradient(135deg, #fdcb6e, #ffeaa7);">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke="#333" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M9 12l2 2 4-4" stroke="#333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <span>IDGuard</span>
+        </div>
+        <div class="mini-app" data-app="meshchat" onclick="openApp('meshchat')">
+          <div class="app-icon" style="background: linear-gradient(135deg, #fd79a8, #e84393);">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><line x1="8" y1="9" x2="16" y2="9" stroke="white" stroke-width="1.5" stroke-linecap="round"/><line x1="8" y1="13" x2="13" y2="13" stroke="white" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </div>
+          <span>MeshChat</span>
+        </div>
+        <div class="mini-app" data-app="provenance" onclick="openApp('provenance')">
+          <div class="app-icon" style="background: linear-gradient(135deg, #00cec9, #81ecec);">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="white" stroke-width="1.5"/><path d="M12 6v6l4 2" stroke="white" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </div>
+          <span>Provenance</span>
+        </div>
+        <div class="mini-app" data-app="reputon" onclick="openApp('reputon')">
+          <div class="app-icon" style="background: linear-gradient(135deg, #2d3436, #636e72);">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26" stroke="white" stroke-width="1.5" stroke-linejoin="round" fill="none"/></svg>
+          </div>
+          <span>Reputon</span>
+        </div>
+      </div>
+
+      <nav class="bottom-nav">
+        <div class="nav-item active">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z" stroke="currentColor" stroke-width="1.5" fill="none"/></svg>
+          <span>Home</span>
+        </div>
+        <div class="nav-item">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><rect x="2" y="5" width="20" height="14" rx="2" stroke="currentColor" stroke-width="1.5"/><line x1="2" y1="10" x2="22" y2="10" stroke="currentColor" stroke-width="1.5"/></svg>
+          <span>Wallet</span>
+        </div>
+        <div class="nav-item">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z" stroke="currentColor" stroke-width="1.5"/></svg>
+          <span>Chat</span>
+        </div>
+        <div class="nav-item">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke="currentColor" stroke-width="1.5"/></svg>
+          <span>AKMA ID</span>
+        </div>
+      </nav>
+    </div>
+
+    <!-- Screen 2: App Loading / Splash -->
+    <div id="screen-app-splash" class="screen">
+      <header class="app-header">
+        <button class="close-btn" onclick="goHome()">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><line x1="18" y1="6" x2="6" y2="18" stroke="white" stroke-width="2" stroke-linecap="round"/><line x1="6" y1="6" x2="18" y2="18" stroke="white" stroke-width="2" stroke-linecap="round"/></svg>
+        </button>
+        <div class="app-header-title">
+          <div class="app-header-icon" id="splash-icon"></div>
+          <span id="splash-app-name">App Name</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><polyline points="6 9 12 15 18 9" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <button class="share-btn">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><line x1="22" y1="2" x2="11" y2="13" stroke="white" stroke-width="1.5"/><polygon points="22,2 15,22 11,13 2,9" stroke="white" stroke-width="1.5" stroke-linejoin="round" fill="none"/></svg>
+        </button>
+      </header>
+      <div class="splash-content">
+        <div class="splash-logo" id="splash-logo"></div>
+      </div>
+    </div>
+
+    <!-- Screen 3: App Main (with verify banner) -->
+    <div id="screen-app-main" class="screen">
+      <header class="app-header">
+        <button class="close-btn" onclick="goHome()">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><line x1="18" y1="6" x2="6" y2="18" stroke="white" stroke-width="2" stroke-linecap="round"/><line x1="6" y1="6" x2="18" y2="18" stroke="white" stroke-width="2" stroke-linecap="round"/></svg>
+        </button>
+        <div class="app-header-title">
+          <div class="app-header-icon" id="main-icon"></div>
+          <span id="main-app-name">App Name</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><polyline points="6 9 12 15 18 9" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <button class="share-btn">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><line x1="22" y1="2" x2="11" y2="13" stroke="white" stroke-width="1.5"/><polygon points="22,2 15,22 11,13 2,9" stroke="white" stroke-width="1.5" stroke-linejoin="round" fill="none"/></svg>
+        </button>
+      </header>
+
+      <div class="app-subtitle" id="main-subtitle">Verified App</div>
+      <div class="verify-banner" onclick="showSignIn()">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z" fill="#fdcb6e" stroke="#f39c12" stroke-width="1"/><line x1="12" y1="9" x2="12" y2="13" stroke="#333" stroke-width="2" stroke-linecap="round"/><circle cx="12" cy="16" r="1" fill="#333"/></svg>
+        <span>Verify your humanhood to continue</span>
+      </div>
+
+      <div class="app-content">
+        <div class="content-placeholder">
+          <div class="content-card shimmer"></div>
+          <div class="content-card shimmer" style="height: 60px;"></div>
+          <div class="content-card shimmer" style="height: 80px;"></div>
+          <div class="content-text">
+            <p style="color: #888; text-align: center; margin-top: 24px;">Content locked until verified</p>
+          </div>
+        </div>
+      </div>
+
+      <nav class="app-bottom-nav">
+        <div class="nav-item">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="8" stroke="currentColor" stroke-width="1.5"/><line x1="21" y1="21" x2="16.65" y2="16.65" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+        </div>
+        <div class="nav-item active">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="7" height="7" rx="1" stroke="currentColor" stroke-width="1.5"/><rect x="14" y="3" width="7" height="7" rx="1" stroke="currentColor" stroke-width="1.5"/><rect x="3" y="14" width="7" height="7" rx="1" stroke="currentColor" stroke-width="1.5"/><rect x="14" y="14" width="7" height="7" rx="1" stroke="currentColor" stroke-width="1.5"/></svg>
+        </div>
+        <div class="nav-item">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="7" r="4" stroke="currentColor" stroke-width="1.5"/></svg>
+        </div>
+      </nav>
+    </div>
+
+    <!-- Sign-In Bottom Sheet -->
+    <div id="signin-overlay" class="overlay" onclick="hideSignIn()">
+      <div class="bottom-sheet" onclick="event.stopPropagation()">
+        <div class="sheet-header">
+          <div class="sheet-app-icon">
+            <svg width="36" height="36" viewBox="0 0 40 40"><circle cx="20" cy="20" r="18" fill="#6C5CE7" stroke="#A29BFE" stroke-width="2"/><path d="M14 26 L20 12 L26 26" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/><line x1="16" y1="22" x2="24" y2="22" stroke="white" stroke-width="2" stroke-linecap="round"/><circle cx="20" cy="10" r="2" fill="#A29BFE"/></svg>
+          </div>
+          <button class="sheet-close" onclick="hideSignIn()">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><line x1="18" y1="6" x2="6" y2="18" stroke="#999" stroke-width="2" stroke-linecap="round"/><line x1="6" y1="6" x2="18" y2="18" stroke="#999" stroke-width="2" stroke-linecap="round"/></svg>
+          </button>
+        </div>
+        <h2 class="sheet-title">Verify with AKMA</h2>
+        <p class="sheet-subtitle">to <span id="sheet-app-ref">App</span> <svg width="14" height="14" viewBox="0 0 24 24" fill="#6C5CE7"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg></p>
+
+        <div class="sheet-divider"></div>
+
+        <p class="sheet-permissions-label">This app will see your</p>
+        <div class="sheet-permissions">
+          <div class="permission-item">
+            <div class="permission-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="7" r="4" stroke="#6C5CE7" stroke-width="1.5"/><path d="M5.5 21c0-3.87 2.91-7 6.5-7s6.5 3.13 6.5 7" stroke="#6C5CE7" stroke-width="1.5" stroke-linecap="round"/></svg>
+            </div>
+            <span>Unique human verification status</span>
+          </div>
+          <div class="permission-item">
+            <div class="permission-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke="#6C5CE7" stroke-width="1.5"/></svg>
+            </div>
+            <span>AKMA proof-of-human credential</span>
+          </div>
+          <div class="permission-item">
+            <div class="permission-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><rect x="3" y="11" width="18" height="11" rx="2" stroke="#6C5CE7" stroke-width="1.5"/><path d="M7 11V7a5 5 0 0110 0v4" stroke="#6C5CE7" stroke-width="1.5"/></svg>
+            </div>
+            <span>Anonymous identity (no personal data)</span>
+          </div>
+        </div>
+
+        <button class="verify-btn" onclick="startVerification()">
+          <svg width="20" height="20" viewBox="0 0 40 40"><circle cx="20" cy="20" r="16" fill="none" stroke="white" stroke-width="2.5"/><path d="M14 26 L20 12 L26 26" stroke="white" stroke-width="2" stroke-linecap="round" fill="none"/><line x1="16" y1="22" x2="24" y2="22" stroke="white" stroke-width="1.5" stroke-linecap="round"/></svg>
+          <span>Verify with AKMA</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Screen 4: Verification Loading -->
+    <div id="screen-verifying" class="screen">
+      <header class="app-header">
+        <button class="close-btn" onclick="goHome()">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><line x1="18" y1="6" x2="6" y2="18" stroke="white" stroke-width="2" stroke-linecap="round"/><line x1="6" y1="6" x2="18" y2="18" stroke="white" stroke-width="2" stroke-linecap="round"/></svg>
+        </button>
+        <div class="app-header-title">
+          <div class="anthrogate-logo-small">
+            <svg width="22" height="22" viewBox="0 0 40 40"><circle cx="20" cy="20" r="18" fill="#6C5CE7" stroke="#A29BFE" stroke-width="2"/><path d="M14 26 L20 12 L26 26" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/><line x1="16" y1="22" x2="24" y2="22" stroke="white" stroke-width="2" stroke-linecap="round"/><circle cx="20" cy="10" r="2" fill="#A29BFE"/></svg>
+          </div>
+          <span id="verify-app-name">App Name</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><polyline points="6 9 12 15 18 9" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <button class="share-btn">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><line x1="22" y1="2" x2="11" y2="13" stroke="white" stroke-width="1.5"/><polygon points="22,2 15,22 11,13 2,9" stroke="white" stroke-width="1.5" stroke-linejoin="round" fill="none"/></svg>
+        </button>
+      </header>
+
+      <div class="verifying-content">
+        <div class="spinner-ring">
+          <svg width="64" height="64" viewBox="0 0 64 64">
+            <circle cx="32" cy="32" r="28" fill="none" stroke="#2d2d3d" stroke-width="4"/>
+            <circle cx="32" cy="32" r="28" fill="none" stroke="#6C5CE7" stroke-width="4" stroke-linecap="round" stroke-dasharray="120 60" class="spinner-arc"/>
+          </svg>
+        </div>
+        <h3 class="did-you-know">DID YOU KNOW</h3>
+        <p class="tip-text" id="tip-text">AKMA uses zero-knowledge proofs to verify you're human without revealing your identity</p>
+      </div>
+    </div>
+
+    <!-- Screen 5: Verified / Success -->
+    <div id="screen-verified" class="screen">
+      <header class="app-header">
+        <button class="close-btn" onclick="goHome()">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><line x1="18" y1="6" x2="6" y2="18" stroke="white" stroke-width="2" stroke-linecap="round"/><line x1="6" y1="6" x2="18" y2="18" stroke="white" stroke-width="2" stroke-linecap="round"/></svg>
+        </button>
+        <div class="app-header-title">
+          <div class="app-header-icon" id="verified-icon"></div>
+          <span id="verified-app-name">App Name</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><polyline points="6 9 12 15 18 9" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <button class="share-btn">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><line x1="22" y1="2" x2="11" y2="13" stroke="white" stroke-width="1.5"/><polygon points="22,2 15,22 11,13 2,9" stroke="white" stroke-width="1.5" stroke-linejoin="round" fill="none"/></svg>
+        </button>
+      </header>
+
+      <div class="verified-content">
+        <div class="verified-card">
+          <div class="verified-avatar">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="7" r="4" fill="#4a4a6a" stroke="#6C5CE7" stroke-width="1.5"/><path d="M5.5 21c0-3.87 2.91-7 6.5-7s6.5 3.13 6.5 7" fill="#4a4a6a" stroke="#6C5CE7" stroke-width="1.5"/></svg>
+          </div>
+          <div class="verified-username">@user.akma.7291 <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" fill="#6C5CE7" stroke="#A29BFE" stroke-width="1"/><path d="M9 12l2 2 4-4" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+
+          <div class="verified-stat-row">
+            <div class="verified-stat">
+              <div class="verified-stat-label">Verification Level</div>
+              <div class="verified-stat-value" style="color: #6C5CE7;">AKMA Verified</div>
+            </div>
+          </div>
+          <div class="verified-stat-row">
+            <div class="verified-stat">
+              <div class="verified-stat-label">Human Score</div>
+              <div class="verified-stat-value" style="color: #00b894;">100%</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Success Toast -->
+      <div class="success-toast" id="success-toast">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" fill="#00b894"/><path d="M8 12l3 3 5-6" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span>You have been verified as human via AKMA.</span>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

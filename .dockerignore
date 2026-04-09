@@ -1,0 +1,23 @@
+# Build & Ship — auto-generated
+node_modules
+.next
+.nuxt
+dist
+build
+.output
+.svelte-kit
+__pycache__
+*.pyc
+.venv
+venv
+target
+vendor
+.git
+.gitignore
+.env
+.env.*
+.DS_Store
+*.md
+LICENSE
+.vscode
+.idea
